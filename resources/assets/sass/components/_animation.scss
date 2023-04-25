@@ -1,0 +1,83 @@
+
+// ====================================
+// Animation
+// ====================================
+
+
+// Content loader
+
+@keyframes kkj-loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+$size: 40px;
+$pos: 30%;
+
+.loader-block .loader-indicator {
+    margin: 30px auto;
+}
+
+.loader-indicator {
+    position: relative;
+    width: $size;
+    height: $size;
+    overflow: hidden;
+
+    &:after {
+        content: "";
+        position: absolute;
+        border-width: 0;
+        border-radius: 100%;
+        animation: kkj-loader 0.6s 0s infinite linear;
+        background-image: linear-gradient(transparent 0%, transparent (100% - $pos), $brand-primary $pos, $brand-primary 100%);
+        width: 100%;
+        height: 100%;
+    }
+    &.brand-success:after{
+        background-image: linear-gradient(transparent 0%, transparent (100% - $pos), $brand-success $pos, $brand-success 100%);
+    }
+}
+
+.content-loader {
+    position: relative;
+    min-height: 250px;
+    &:before {
+        content: "";
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(#fff, 0.5);
+    }
+
+    .loader-indicator {
+        position: absolute;
+        display: none;
+        z-index: 98;
+        top: 200px;
+        left: 50%;
+        margin-top: -$size/2;
+        margin-left: -$size/2;
+        opacity: 1;
+    }
+
+    &.loading {
+        &:before {
+            display: block;
+        }
+        .loader-indicator {
+            display: block;
+        }
+    }
+}

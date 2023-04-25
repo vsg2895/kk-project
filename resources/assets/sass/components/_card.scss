@@ -1,0 +1,211 @@
+
+// ====================================
+// Cards
+// ====================================
+
+.card {
+    border: none;
+    box-shadow: 0 1px 4px 0 rgba(#000, 0.15);
+
+    margin-left: 15px;
+    margin-right: 15px;
+
+    &-footer {
+        &.bg-primary {
+            color: #fff;
+        }
+        &:last-child {
+            border-radius: 0 0 $card-border-radius $card-border-radius;
+
+            &:first-child {
+                border-radius: $card-border-radius;
+            }
+        }
+    }
+}
+
+.course-card {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 10px;
+
+    .ico {
+        float: right;
+        margin-top: 0.5rem;
+    }
+    .type {
+        margin-left: -$card-spacer-x;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        white-space: normal;
+    }
+    .date {
+        font-size: $font-size-sm;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $gray;
+    }
+    .time {
+        color: $gray-light;
+        font-size: $font-size-sm;
+    }
+    .price {
+        font-size: $font-size-h3;
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+    }
+    .school-link {
+        display: block;
+        max-height: 2.5rem;
+        line-height: 1.2;
+    }
+    .school-name {
+        display: inline;
+        color: $brand-success;
+    }
+    .school-logo {
+        max-height: 40px;
+        width: auto;
+        max-width: 210px;
+    }
+    .school-brand {
+        margin-bottom: 0.75rem;
+
+        a {
+            color: $gray-dark;
+        }
+        .logo {
+            margin-right: 0.5rem;
+            vertical-align: bottom;
+
+            + span {
+                vertical-align: bottom;
+            }
+        }
+    }
+
+    .map {
+        height: 160px;
+    }
+
+    @include media-breakpoint-down('sm') {
+        .school-link {
+            margin-top: 1rem;
+        }
+    }
+
+    @include media-breakpoint-up('sm') {
+        &.has-map.card,
+        &.has-map .card {
+            padding-right: 12rem + $card-spacer-x;
+            min-height: 12rem;
+        }
+
+        .btn {
+            float: right;
+        }
+
+        .map {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 12rem;
+            height: 100%;
+        }
+    }
+}
+.course-selection-card {
+    .course-title {
+        margin-bottom: 0;
+    }
+    .ico {
+        margin-left: 1rem;
+    }
+}
+
+
+.product-card {
+    border-radius: 10px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    text-align: center;
+    transition: all #{$transition-speed} #{$transition-ease};
+    font-size: $font-size-base;
+
+    .btn {
+        padding: 0;
+
+        > div {
+            padding: $btn-padding-y $btn-padding-x;
+        }
+        .ico {
+            margin-bottom: 0;
+        }
+    }
+    button {
+        @include button-reset;
+        padding: 0;
+        width: 35%;
+        padding: $btn-padding-y $btn-padding-x;
+        color: #fff;
+    }
+    .quantity {
+        display: inline-block;
+        width: 30%;
+    }
+
+    h3 {
+        color: $gray;
+        transition: $transition;
+        word-break: break-word;
+        font-size: 1.1rem;
+    }
+    .ico {
+        min-height: 30px;
+        margin-bottom: 0.75rem;
+    }
+    .price-tag {
+        @extend .card;
+        display: inline-block;
+        position: absolute;
+        top: -0.5rem;
+        right: -0.75rem;
+        padding: 0.25rem 0.5rem;
+        background-color: $brand-primary;
+        color: #fff;
+        font-family: $font-family-numerical;
+        transition: $transition;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &.active {
+        background-color: $brand-primary;
+        color: #fff;
+
+        h3 {
+            color: #fff;
+        }
+        .price-tag {
+            background-color: #fff;
+            color: $brand-primary;
+        }
+        .btn {
+            border-color: #fff;
+            color: #fff;
+
+            > div {
+                padding: 0;
+            }
+        }
+    }
+
+    p {
+        min-height: 24px;
+    }
+}

@@ -1,0 +1,90 @@
+
+// ====================================
+// Icons
+// ====================================
+
+.ico {
+    display: inline-block;
+    vertical-align: middle;
+    text-indent: -99999px;
+    fill: currentColor;
+}
+button.ico {
+    @include button-reset;
+}
+
+.brand-logo {
+    width: 148px;
+    height: 51px;
+    background-image: url(/images/kkj-logo-new.png?12);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.ico-angle-up,
+.ico-angle-down {
+    &.ico-lg {
+        width: 18px;
+        height: 10px;
+
+        svg {
+            stroke-width: 2px;
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                stroke-width: 20px;
+            }
+        }
+    }
+}
+
+.ico-arrow-right {
+    &.ico-sm {
+        width: 13px;
+        height: 10px;
+    }
+}
+
+
+.ico-check {
+    &.ico-lg {
+        width: 22px;
+        height: 16px;
+    }
+}
+.ico-cross {
+    &.ico-lg {
+        width: 24px;
+        height: 24px;
+    }
+}
+.ico-directions {
+    &.ico-sm {
+        width: 14px;
+        height: 16px;
+    }
+}
+
+
+.ico-smiley-1,
+.ico-smiley-2,
+.ico-smiley-3,
+.ico-smiley-4,
+.ico-smiley-5 {
+    &.ico-xl {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+.ico-klarna-logo {
+    vertical-align: baseline;
+    color: $klarna-color;
+
+    &.ico-lg {
+        height: 28px;
+        width: 105px;
+    }
+}

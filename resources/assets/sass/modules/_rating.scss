@@ -1,0 +1,178 @@
+
+// ====================================
+// Rating
+// ====================================
+
+.school-rating {
+    display: inline-block;
+    @extend .text-numerical;
+    color: $brand-warning;
+    font-size: 2rem;
+    white-space: nowrap;
+
+    .rating-display-user {
+        color: $gray-light;
+    }
+
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.smiley {
+    .check {
+        display: none;
+    }
+}
+
+.school-rating-bar {
+
+    .rating-bar {
+        display: inline-block;
+    }
+    .rating-display {
+        vertical-align: middle;
+        font-size: 1.5rem;
+    }
+
+    .smiley {
+        position: relative;
+        display: inline-block;
+        font-size: $font-size-base;
+        margin-right: 0.25rem;
+        cursor: pointer;
+        transition: all #{$transition-speed} #{$transition-ease};
+
+        .check {
+            display: block;
+            position: absolute;
+            top: -0.375rem;
+            right: -0.375rem;
+            padding: 0.125rem 0.25rem 0.25rem;
+            line-height: 0.5rem;
+            border-radius: 9999px;
+            background-color: $brand-primary;
+            color: #fff;
+            opacity: 0;
+            transition: opacity #{$transition-speed} #{$transition-ease};
+        }
+
+        svg path {
+            transition: all #{$transition-speed} #{$transition-ease};
+        }
+        & svg path,
+        &.active ~ .smiley svg path {
+            fill: transparent;
+            stroke: $gray-lighter;
+        }
+        &.active,
+        &.hover,
+        &:hover:not(.disabled) {
+            &:first-child,
+            &:last-child { // Used until icons get classes
+                svg path {
+                    fill: #fff !important;
+                }
+            }
+            svg path {
+                fill: transparent !important;
+                stroke: #fff !important;
+
+                &:first-child {
+                    fill: $brand-warning !important;
+                    stroke: $brand-warning !important;
+                }
+            }
+        }
+        &:hover:not(.disabled) {
+            transform: scale(1.1);
+
+            ~ .smiley.active {
+                svg path {
+                    fill: $gray-lighter !important;
+
+                    &:first-child {
+                        stroke: $gray-lighter !important;
+                    }
+                }
+            }
+        }
+        &.selected {
+            z-index: 1;
+
+            .ico-smiley {
+                @include animated;
+                @include tada;
+            }
+            .check {
+                opacity: 1;
+                @include animated;
+                @include pulse;
+            }
+        }
+    }
+}
+
+$unchecked-star: '\2606';
+$unchecked-color: #888;
+$checked-star: '\2605';
+$checked-color: #e52;
+
+.star-cb-group {
+    /* remove inline-block whitespace */
+    font-size: 0;
+    * {
+        font-size: 2rem;
+    }
+    /* flip the order so we can use the + and ~ combinators */
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    & > input {
+        display: none;
+        & + label {
+            /* only enough room for the star */
+            display: inline-block;
+            overflow: hidden;
+            text-indent: 9999px;
+            width: 1em;
+            white-space: nowrap;
+            cursor: pointer;
+            &:before {
+                display: inline-block;
+                text-indent: -9999px;
+                content: $unchecked-star;
+                color: $unchecked-color;
+            }
+        }
+        &:checked ~ label:before,
+        & + label:hover ~ label:before,
+        & + label:hover:before {
+            content: $checked-star;
+            color: #e52;
+            text-shadow: 0 0 1px #333;
+        }
+    }
+
+    /* the hidden clearer */
+    & > .star-cb-clear + label {
+        text-indent: -9999px;
+        width: .5em;
+        margin-left: -.5em;
+    }
+    & > .star-cb-clear + label:before {
+        width: .5em;
+    }
+
+    &:hover > input + label:before {
+        content: $unchecked-star;
+        color: $unchecked-color;
+        text-shadow: none;
+    }
+    &:hover > input + label:hover ~ label:before,
+    &:hover > input + label:hover:before {
+        content: $checked-star;
+        color: $checked-color;
+        text-shadow: 0 0 1px #333;
+    }
+}

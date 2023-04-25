@@ -1,0 +1,509 @@
+// ====================================
+// Course Page
+// ====================================
+
+#course-page {
+  position: relative;
+  z-index: 1;
+
+  .course-card {
+    @include media-breakpoint-only(xs) {
+      .btn-danger {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .btn-outline-primary {
+      .ico-plus {
+        margin-top: 2px;
+        margin-left: .25rem;
+      }
+    }
+
+    .card {
+      margin-bottom: 0;
+    }
+
+    .course-participants {
+      padding: 0 1rem 3rem;
+    }
+  }
+}
+
+.glyphicon.glyphicon-chevron-left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 7%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,0);
+    filter: alpha(opacity=50);
+    opacity: .5;
+    background-image: linear-gradient(to right,rgba(173, 154, 19,.65) 0,rgba(0,0,0,.0001) 100%);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+
+.glyphicon.glyphicon-chevron-right {
+    right: 0;
+    left: auto;
+    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(173, 154, 19,.65) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 7%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,0);
+    opacity: .5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+
+.carousel-control-prev-icon {
+    opacity: .5;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding-top: 100%;
+    background: transparent no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+
+.carousel-control-next-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding-top: 100%;
+    background: transparent no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+
+.checkout-container.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.checkout-step {
+  margin-bottom: 40px;
+  border-radius: 5px;
+
+  &:first-child {
+    border-bottom: none;
+  }
+}
+
+.checkout-step.no-courses {
+  text-align: center;
+  color: $gray-light;
+}
+
+.custom-checkbox {
+    &.disabled:before {
+        background: #FFFFFF;
+        z-index: 1;
+        opacity: .5;
+        display: block;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#checkout-step-gift-card {
+  position: relative;
+
+  .loader-indicator {
+    @include center-align(absolute);
+    z-index: 1;
+  }
+
+  .gift-card {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem .25rem;
+    border-radius: 10px;
+    background: $gray-lightest;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    > * {
+      vertical-align: middle;
+    }
+
+    .value {
+      font-size: 1.75rem;
+      font-weight: 600;
+      padding: 0 .5rem;
+    }
+  }
+
+  .col-sm-4 {
+    text-align: center;
+  }
+
+  &.disabled:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: $white;
+    z-index: 1;
+    opacity: .5;
+  }
+
+  @include media-breakpoint-only('xs') {
+    .btn {
+      margin-top: 1rem;
+
+      &.btn-danger {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.gift-card-message {
+    color: red;
+}
+
+.gift-card-message-hidden {
+    display: none;
+}
+
+#checkout-step-login {
+  @include media-breakpoint-up('md') {
+    > div {
+      padding-left: $grid-gutter-width-base;
+      padding-right: $grid-gutter-width-base;
+    }
+    > div + div {
+      //border-left: $border-width solid $gray-lighter;
+      margin-top: 2rem;
+    }
+  }
+  @include media-breakpoint-down('sm') {
+    > div + div {
+      margin-top: 2rem;
+    }
+    .login-btn-coursepage {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+#klarna-checkout-container {
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+#checkout-step-payment {
+  .btn {
+    min-width: 200px;
+    margin-bottom: 10px;
+  }
+}
+
+
+.course-participants {
+  margin-bottom: 0.5rem;
+
+  > button {
+    margin-top: 1rem;
+  }
+}
+
+.course-participant {
+  position: relative;
+
+  &:nth-child(odd) .row {
+    border-radius: $border-radius;
+    background-color: $gray-lightest;
+  }
+
+  .row {
+    padding: 8px;
+  }
+
+  .form-group {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.course-participant-remove {
+  width: auto;
+  min-width: 0;
+  padding: 0;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  color: $brand-danger;
+}
+
+#booking-confirmation {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.addon {
+  padding: 20px 0;
+  margin-bottom: 20px;
+
+  &__title {
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__quantity {
+    display: flex;
+    align-items: center;
+  }
+
+  &__minus {
+    padding: 0.5rem;
+  }
+
+  &__number {
+    //background-color: $color-main-active-element;
+    height: 32px;
+    width: 28px;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+  }
+
+  &__plus {
+    padding: 0.5rem;
+  }
+
+  &__delete {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__trash {
+    background: image-url('trash.svg');
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 18px;
+    width: 18px;
+    margin-right: 10px;
+  }
+
+  &__remove {
+    color: $xmas-4;
+    font-weight: bold;
+  }
+
+  &__price {
+    display: inline-block;
+  }
+
+}
+
+.course-box {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #F7F7F8;
+
+  &__price {
+    display: inline-block;
+  }
+
+  &__multiply {
+    display: inline-block;
+  }
+
+  &__total {
+    display: inline-block;
+    padding-right: 20px;
+  }
+
+  &__sum {
+    display: inline-block;
+    color: #E3C11B;
+    font-weight: 600;
+  }
+
+  &__bill-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__delete {
+    display: inline-flex;
+    cursor: pointer;
+  }
+
+  &__trash {
+    background: image-url('trash.svg');
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 18px;
+    width: 18px;
+    margin-right: 10px;
+  }
+
+  &__remove {
+    color: $xmas-4;
+    font-weight: bold;
+  }
+}
+
+.checkout-cart {
+  .course-item {
+    height: auto;
+    @include media-breakpoint-up('xl') {
+      margin-bottom: 130px;
+    }
+
+    &-list-item {
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+
+  .school-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 15px 15px 0;
+    border-top: 1px solid #DFDFDF;
+    @include media-breakpoint-down('lg') {
+      justify-content: center;
+    }
+    @include media-breakpoint-down('sm') {
+      justify-content: space-between;
+    }
+  }
+
+  .total {
+    font-weight: bold;
+  }
+
+  .price {
+    margin-left: 1rem;
+  }
+}
+
+.checkout-page {
+  position: relative;
+  padding-top: 8px;
+}
+
+.addon-container {
+  display: flex;
+  flex-flow: column nowrap;
+  @include media-breakpoint-down('lg') {
+    flex-flow: row nowrap;
+  }
+  @include media-breakpoint-down('sm') {
+    flex-flow: column nowrap;
+  }
+
+  .addon {
+    @include media-breakpoint-down('lg') {
+      flex: 0 0 50%;
+    }
+    @include media-breakpoint-down('sm') {
+    }
+  }
+
+  .school-info {
+    @include media-breakpoint-down('lg') {
+      flex: 0 0 50%;
+    }
+    @include media-breakpoint-down('sm') {
+    }
+  }
+}
+
+@include media-breakpoint-up('xl') {
+  .cart-container {
+    width: 33.33333%;
+    float: right;
+  }
+  #checkout-step-login {
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  #checkout-step-payment {
+    clear: both;
+  }
+  
+}

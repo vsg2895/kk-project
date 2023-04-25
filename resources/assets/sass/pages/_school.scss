@@ -1,0 +1,1559 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,600');
+
+.calendar-online-city-name {
+    height: 33px!important;
+}
+
+.school-page {
+    $cart-width: 220px;
+
+    .segment-product {
+        font-family: Roboto;
+        line-height: 28px;
+        margin-top: 20px;
+
+          > h2 {
+              font-size: 24px;
+              font-weight: 900;
+              letter-spacing: 0;
+          }
+    }
+    .mer-information {
+        display: flex;
+        flex-direction: column;
+        color: #2A2A2A;
+        font-family: "Open Sans", serif;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 19px;
+        text-align: right;
+        
+        a {
+            cursor: pointer;
+        }
+    }
+
+    .header {
+        background: $brand-primary;
+        padding: 2.75rem 0;
+        span {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: $white;
+
+        }
+        .name {
+            font-size: 2.5rem; //margin-right: 1.5rem;
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: 600;
+            color: $white;
+        }
+        .icon {
+            vertical-align: super;
+        }
+        .base-line {
+            &.icon {
+                vertical-align: baseline;
+            }
+        }
+        .icon,
+        .city,
+        h2.city {
+            font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-left: .5rem;
+            margin-bottom: 0;
+            color: $white;
+            display: inline-block;
+        }
+        .school-rating {
+            width: 11rem;
+        }
+        .smiley {
+            display: inline-block;
+            margin-right: .125rem;
+            .ico-smiley {
+                height: 1.625rem;
+                width: 1.625rem;
+                transform: translateY(-.25rem);
+            }
+        }
+        .rating {
+            font-size: 1.875rem;
+            font-weight: 400;
+            margin-right: .5rem;
+        }
+        .rating-link {
+            vertical-align: text-bottom;
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .xmas-bubble {
+            position: absolute;
+            padding: 1rem .25rem;
+            border-radius: 9999px;
+            background: $xmas-primary;
+            color: #fff;
+            text-align: center;
+            right: 0;
+            top: -1rem;
+            width: 170px;
+            height: 170px;
+            margin-left: 40px;
+            margin-right: 40px;
+            transition: transform .5s ease;
+            &:hover {
+                transform: scale(1.05);
+            }
+            .usp-title {
+                margin: 0;
+                @include center-align;
+                line-height: 1.25;
+                position: relative;
+                > div {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    margin-bottom: 0rem;
+                    &.h4 {
+                        font-weight: 700;
+                        color: $xmas-secondary;
+                    }
+                }
+                .icon {
+                    position: absolute;
+                    top: 1rem;
+                    left: -3rem;
+                    + .icon {
+                        left: auto;
+                        right: -2rem;
+                        top: -2rem;
+                    }
+                }
+            }
+            @include media-breakpoint-up('lg') {
+                width: 190px;
+                height: 190px;
+                right: 9rem;
+                .usp-title > * {
+                    font-size: 2rem;
+                }
+            }
+            @include media-breakpoint-up('xl') {
+                right: 12rem;
+            }
+        }
+        .gift-card-btn {
+            color: $white;
+            border-color: $xmas-primary;
+            background-color: $xmas-primary;
+            @include media-breakpoint-up(sm) {
+                margin-left: 1rem;
+            }
+        }
+        .container > .row > div:first-of-type {
+            color: red;
+            @include media-breakpoint-up(md) {
+                padding-right: 200px;
+            }
+            @include media-breakpoint-up(lg) {
+                padding-right: 400px;
+            }
+            @include media-breakpoint-up(lg) {
+                padding-right: 450px;
+            }
+        }
+    }
+    .tabs-block {
+        border-radius: 13px 13px 2px 2px;
+        background: $white;
+            .nav-tabs {
+            text-align: center;
+            .nav-link {
+                height: auto;
+                padding-top: 1.125rem;
+                font-size: 1.2rem;
+                color: black;
+                border: none;
+                &.active,
+                &:hover {
+                    color: $brand-primary;
+                    border-bottom: 2px solid $brand-primary;
+                }
+            }
+            &:hover {
+                .nav-link {
+                    &.active:not(:hover) {
+                        color: $gray-light;
+                        border-bottom-color: transparent;
+                    }
+                }
+            }
+        }
+        background: $white;
+        .photo-background {
+            background: image-url('school_page_background.png') no-repeat center center fixed;
+            background-size: cover;
+            .blurb {
+                color: $white;
+                font-size: 1.25rem;
+                padding: 2.5rem 0;
+                text-align: center;
+            }
+            .content {
+                padding-bottom: 3rem;
+                .price-table-container {
+                    background: $white;
+                    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+                    border-radius: 2px;
+                    padding: 0 1rem 1rem;
+                    max-width: 650px;
+                    margin: 3rem auto 0;
+                    .comparison-table {
+                        .nav {
+                            margin-bottom: 1rem;
+                        }
+                        .table {
+                            tbody {
+                                th {
+                                    &:first-child {
+                                        padding-left: 0.75rem;
+                                    }
+                                }
+                            }
+                        }
+                        tbody {
+                            .description {
+                                @include media-breakpoint-down('sm') {
+                                    text-align: center;
+                                    .custom-control {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .price {
+                                @include media-breakpoint-down('sm') {
+                                    width: 100%;
+                                }
+                                @include media-breakpoint-up('md') {
+                                    text-align: left;
+                                }
+                            }
+                        }
+                        .comparison-table-sum {
+                            background-color: $brand-primary;
+                            text-transform: uppercase;
+                            color: #fff;
+                            @include media-breakpoint-down('sm') {
+                                th,
+                                td {
+                                    text-align: center;
+                                }
+                                td {
+                                    width: 100%;
+                                }
+                            }
+                            h4 {
+                                font-weight: 700;
+                            }
+                            th,
+                            td {
+                                padding-top: 1rem;
+                                padding-bottom: 1rem;
+                            }
+                            th {
+                                &:first-child {
+                                    padding-left: 1.5rem;
+                                }
+                            }
+                            td {
+                                text-align: center;
+                                white-space: nowrap;
+                                &:nth-child(even) {
+                                    background-color: rgba(#000, 0.1);
+                                }
+                                &:last-child:before {
+                                    background-color: $brand-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+                .item {
+                    padding: 1.75rem 5.875rem;
+                    max-width: 690px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border-radius: .75rem;
+                    background-color: $white;
+                    box-shadow: 0 0 50px 0 rgba(141, 141, 141, 0.19);
+                    + .item {
+                        margin-top: .5rem;
+                    }
+                    h2 {
+                        font-size: 1.5rem;
+                        margin-bottom: .5rem;
+                    }
+                    .col + .col {
+                        text-align: right;
+                        padding-top: .5rem
+                    }
+                    svg,
+                    .description,
+                    .no-description {
+                        margin-right: .5rem;
+                        color: $brand-success;
+                    }
+                    .description {
+                        font-weight: 600;
+                    }
+                    .price {
+                        font-size: 1.75rem;
+                        color: $brand-warning;
+                        font-weight: 600;
+                    }
+                    .btn {
+                        margin-left: 1.75rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .courses-block {
+        border-radius: 13px 13px 2px 2px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+        background: $gray-lightest;
+        margin: 2rem 1rem;
+        .header {
+            border-radius: 13px 13px 0 0;
+            background: linear-gradient(180deg, $brand-primary, #7D9FD0);
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: $white;
+            padding: 1.75rem 0;
+            h3.courses-block__title {
+                font-size: 2rem;
+                margin-bottom: 1.25rem;
+            }
+
+        }
+        .courses {
+            padding: 2rem;
+            .no-courses {
+                text-align: center;
+                @include media-breakpoint-down('sm') {
+                    .btn-outline-success {
+                        font-size: 0.8rem;
+                    }
+                    p {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+            .course {
+                max-width: 690px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 1.5rem 5% 1.25rem;
+                background: $white;
+                border-radius: .75rem;
+                box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+                font-weight: 600;
+                + .course {
+                    margin-top: .5rem;
+                }
+                .name {
+                    font-size: 1.5rem;
+                    color: $gray-dark;
+                    span {
+                        float: right;
+                    }
+                }
+                .date {
+                    font-weight: 500;
+                    svg {
+                        margin-right: .25rem;
+                    }
+                }
+                .other {
+                    text-align: right;
+                    .availability-warning > * {
+                        display: inline-block;
+                        font-size: .75rem;
+                        color: $brand-danger;
+                        margin-right: .25rem;
+                        svg {
+                            margin-bottom: -.25rem;
+                        }
+                    }
+                    .price {
+                        font-size: 1.75rem;
+                        display: inline-block;
+                        color: $brand-warning;
+                        vertical-align: middle;
+                        text-align: right;
+                    }
+                }
+            }
+            .paginator-container {
+                padding-top: 1rem;
+                text-align: center;
+                margin-bottom: -1rem;
+            }
+        }
+    }
+    .calendar-online-button {
+        @include media-breakpoint-up('md') {
+            float: right!important;
+            margin-left: 20px!important;
+        }
+        @include media-breakpoint-down('md') {
+            margin-bottom: 15px;
+        }
+    }
+
+    .calendar-online-course {
+        text-align: center!important;
+        @include media-breakpoint-up('md') {
+            text-align: left!important;
+        }
+    }
+
+    .courses-calendar-segment-block {
+        flex-basis: 60%;
+        flex-grow: 1;
+        order: 4;
+
+        .header {
+            border-radius: 13px 13px 0 0;
+            background: linear-gradient(180deg, $brand-primary, #7D9FD0);
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: $white;
+            padding: 1.75rem 0;
+            h3.courses-block__title {
+                font-size: 2rem;
+                margin-bottom: 1.25rem;
+            }
+
+        }
+        .no-courses {
+            text-align: center;
+            @include media-breakpoint-down('sm') {
+                .btn-outline-success {
+                    font-size: 0.8rem;
+                }
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        .paginator-container {
+            padding-top: 1rem;
+            text-align: center;
+            margin-bottom: -1rem;
+        }
+    }
+
+    .courses-segment-block {
+        border-radius: 13px 13px 2px 2px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+        background: $gray-lightest;
+
+        .header {
+            border-radius: 13px 13px 0 0;
+            background: linear-gradient(180deg, $brand-primary, #7D9FD0);
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: $white;
+            padding: 1.75rem 0;
+            h3.courses-block__title {
+                font-size: 2rem;
+                margin-bottom: 1.25rem;
+            }
+
+        }
+        .courses {
+            padding: 2rem;
+            .no-courses {
+                text-align: center;
+                @include media-breakpoint-down('sm') {
+                    .btn-outline-success {
+                        font-size: 0.8rem;
+                    }
+                    p {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+            .courses-date {
+                max-width: 690px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 1.5rem 5% 1.25rem;
+                background: $white;
+                border-radius: .75rem;
+                box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+                font-weight: 600;
+                text-align: center;
+                margin-bottom: .5rem !important;
+                text-transform: capitalize;
+            }
+            .course {
+                max-width: 690px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 1.5rem 5% 1.25rem;
+                background: $white;
+                border-radius: .75rem;
+                box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+                font-weight: 600;
+                + .course {
+                    margin-top: .5rem;
+                }
+                .name {
+                    font-size: 1.5rem;
+                    color: $gray-dark;
+                    span {
+                        float: right;
+                    }
+                }
+                .date {
+                    font-weight: 500;
+                    text-align: left;
+                    svg {
+                        margin-right: .25rem;
+                    }
+
+                    @include media-breakpoint-only('xs') {
+                        text-align: center!important;
+                    }
+                }
+                .other {
+                    text-align: center;
+                    .availability-warning > * {
+                        text-align: center;
+                        display: inline-block;
+                        font-size: .75rem;
+                        color: $brand-danger;
+                        margin-right: .25rem;
+                        svg {
+                            margin-bottom: -.25rem;
+                        }
+                    }
+                    .price {
+                        font-size: 1.75rem;
+                        display: inline-block;
+                        color: $brand-warning;
+                        vertical-align: middle;
+                        text-align: right;
+                    }
+                }
+            }
+            .paginator-container {
+                padding-top: 1rem;
+                text-align: center;
+                margin-bottom: -1rem;
+            }
+        }
+    }
+    .no-matching-times {
+
+        @include media-breakpoint-down('md') {
+            text-align: left;
+        }
+        @include media-breakpoint-up('md') {
+            text-align: center;
+        }
+        padding: 0 3rem;
+    }
+    .school-info-block {
+        //margin: 0 0 $grid-gutter-width-base;
+
+        @include media-breakpoint-up('md') {
+            text-align: center;
+            //padding-bottom: $grid-gutter-width-base*1.5;
+        }
+        @include media-breakpoint-up('md') {
+            min-height: 340px; //padding-top: $grid-gutter-width-base*2;
+        }
+        &.no-courses {
+            padding-top: 3rem;
+        }
+        hr {
+            margin-bottom: 3rem;
+        }
+        #hero-left {
+            @include media-breakpoint-only('sm') {
+                margin-bottom: $grid-gutter-width-base;
+            }
+            .hero-left {
+                &__school-name {
+                    font-size: 2rem;
+                    margin-bottom: 0;
+                }
+            }
+
+            //h3 {
+            //    margin-bottom: $font-size-xs;
+            //}
+            ul {
+                @include list-unstyled;
+                li {
+                    font-size: $font-size-base;
+                    margin-bottom: .25rem;
+                    svg {
+                        color: $brand-warning;
+                        width: $font-size-h2;
+                        height: $font-size-h2;
+                        margin-right: .25rem;
+                    }
+                }
+            }
+            .school-description-block,
+            .school-rating-block {
+                margin-bottom: 1rem;
+            }
+            .school-rating-block .school-rating-text {
+                margin-top: -0.25rem;
+            }
+            .org-number {
+                margin-bottom: 0;
+            }
+        }
+
+        .school-map {
+            position: relative;
+            display: flex;
+            height: 350px;
+            width: 100%;
+
+            #map {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .alert {
+            margin-bottom: 3rem;
+        }
+    }
+    @include media-breakpoint-up(md) {
+        .school-info-block #school-info .school-card {
+            margin-left: -2rem;
+            margin-right: 1rem;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .photo-background .content {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+    }
+    @include media-breakpoint-down(sm) {
+        .tabs-block {
+            .nav-tabs .nav-link {
+                height: auto;
+                padding: 1rem;
+                font-size: 1.125rem;
+                border-bottom-width: .125rem;
+            }
+            .photo-background .content .item {
+                padding: 1rem 2rem;
+            }
+        }
+    }
+    @include media-breakpoint-down(xs) {
+        .header {
+            text-align: center;
+            .school-rating-bar {
+                margin: .5rem 0;
+            }
+        }
+        .tabs-block {
+            .nav-tabs .nav-link {
+                padding: 1rem .5rem;
+                font-size: 1.125rem;
+                border-bottom-width: .125rem;
+            }
+            .photo-background .content .item {
+                text-align: center;
+                padding: 2rem;
+                .col + .col {
+                    text-align: center;
+                }
+                .btn {
+                    margin-left: 0;
+                    margin-top: .5rem;
+                }
+            }
+        }
+        .courses-block .courses .course {
+            .date,
+            .other {
+                text-align: center;
+            }
+        }
+    }
+    .intensive-hero {
+        @include image-2x('bg-pic-1440', 'png');
+    }
+    .usp-xmas {
+        pointer-events: none;
+    }
+}
+
+.dashboard {
+    #tab-prices {
+        position: relative;
+        .align-right {
+            text-align: right;
+            @include media-breakpoint-up(sm) {
+                padding-top: 6rem;
+            }
+            @include media-breakpoint-up(lg) {
+                padding-top: 9rem;
+            }
+        }
+        #add-custom-addon-form {
+            width: 100%;
+            input {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            @include media-breakpoint-up(sm) {
+                position: absolute;
+                //right: 0;
+                bottom: 4rem;
+                input {
+                    margin-bottom: 0;
+                }
+            }
+            @include media-breakpoint-up(lg) {
+                width: 50%;
+                .btn {
+                    margin-top: 1rem;
+                }
+            }
+            @include media-breakpoint-up(xl) {
+                .btn {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+.school-header {
+    padding-top: 120px;
+    padding-bottom: 40px;
+
+    @include media-breakpoint-up('md') {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-up('lg') {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    @include media-breakpoint-down('sm') {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .header-ratings {
+        cursor: pointer;
+    }
+
+    .usp-xmas {
+        background: $xmas-primary;
+        bottom: -25px;
+        width: 230px;
+        height: 230px;
+        right: 150px;
+        position: absolute;
+        .h2 {
+            font-size: 1.5rem;
+        }
+        @include media-breakpoint-down('lg') {
+            display: block;
+            right: 50px;
+        }
+        @include media-breakpoint-down('md') {
+            display: block;
+            bottom: -15px;
+            width: 180px;
+            height: 180px;
+            .h2 {
+                font-size: 1.25rem;
+            }
+        }
+    }
+    .intensive-button {
+        margin-right: auto;
+        margin-left: 0;
+        font-weight: 600;
+    }
+}
+.basic-info-title {
+    display: flex;
+    color: $heading-dark;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 28px;
+
+    @include media-breakpoint-up('md') {
+        justify-content: space-between;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .top-partner-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include media-breakpoint-down('xl') {
+            margin-top: 10px;
+        }
+    }
+}
+
+.top-partner-medal {
+    color: #edd33d;
+}
+
+.small-text {
+    font-size: 1rem;
+}
+.medium-text {
+    font-size: 1.5rem;
+}
+.large-text {
+    font-size: 2rem;
+}
+.x-large-text {
+    font-size: 3rem;
+}
+
+.button-add-to-cart {
+    min-width: 120px;
+    margin-left: 33%;
+}
+
+.school-calendar-title {
+    height: 47px;
+    @include media-breakpoint-down('md') {
+        height: 100px!important;
+    }
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    color: #000000;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    @include media-breakpoint-only('xs') {
+        margin-left: 30px;
+    }
+}
+
+.segment-result-object-wrapper {
+    border-bottom: 1px solid #DDE0E2;
+}
+
+.availability-warning > * {
+    @include media-breakpoint-down('md') {
+        display: inline-block;
+        color: #F3664F;
+
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 19px;
+        padding-bottom: 5px;
+        svg {
+            margin-bottom: -.25rem;
+        }
+    }
+}
+
+.school-curse-buy-button {
+    min-width: 125px;
+    margin-top: 25%;
+}
+
+.segment-result-object {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up("md") {
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 5px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        transition: transform 0.35s ease-in-out, background-color 0.35s ease-in-out;
+    }
+
+    @include media-breakpoint-down("sm") {
+        min-height: 122px;
+        width: calc(100% - 1rem);
+        height: 100%;
+        padding: 1rem 1rem 1rem 2rem;
+        margin-left: -1px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: #0F0F0F;
+        margin-bottom: 22px;
+        font-family: "Open Sans", serif;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 19px;
+        color: #ffffff;
+    }
+
+    &.active {
+        color: #000000!important;
+    }
+}
+
+.margin-20px {
+    @include media-breakpoint-down('md') {
+        margin-left: 20px;
+    }
+}
+
+.school-info-description {
+    flex-basis: 100%;
+    order: 2;
+    font-family: "Open Sans";
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 19px;
+    margin: 1rem 0;
+}
+
+.vl-calendar {
+    order: 3;
+    flex-basis: 40%;
+    flex-grow: 1;
+
+    @include media-breakpoint-up("sm") {
+        flex-basis: 40%;
+    }
+}
+
+.vl-calendar + .courses-calendar-segment-block {
+    @include media-breakpoint-up("sm") {
+        flex-basis: 60%;
+        padding-left: 1rem;
+    }
+}
+
+.btn-school-checkout {
+    display: flex;
+    justify-content: flex-end;
+    order: 3;
+    flex-basis: 100%;
+}
+
+.school-card-type-name {
+    flex-basis: 50%;
+    order: 1;
+    font-family: Roboto, serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #fff;
+
+    @include media-breakpoint-down("md") {
+        flex-basis: 100%;
+    }
+}
+
+.segment-result-object-calendar {
+    .tag {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    @include media-breakpoint-only('xs') {
+        //margin-left: 30px;
+        margin-bottom: 15px;
+    }
+}
+
+.segment-name {
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    background-color: black;
+    color: white;
+    //background-color: #F5F5F5;
+    margin-bottom: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    h4 {
+        font-weight: bold;
+    }
+}
+
+.segment-name-product {
+    color: $heading-dark;
+    font-family: Roboto, serif;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 28px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.segment-visibility-toggle {
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-decoration: none;
+    color: #477AC4;
+    float: right;
+    padding-right: 30px;
+}
+
+.show-ml {
+    color: #00AF97;
+    cursor: pointer;
+}
+
+.package {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    & > div {
+        margin-bottom: 15px;
+    }
+
+    .course-item {
+        height: 100%;
+        min-height: 450px;
+        flex-flow: column nowrap;
+        border-radius: 10px;
+        overflow: hidden;
+        &-list {
+            list-style-image: image-url('check_icon_small.svg');
+            &-item {
+                padding-left: 10px;
+                line-height: 2rem;
+            }
+        }
+        &-background {
+            height: 75px;
+            color: #0F0F0F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        &-content {
+            flex: 1 1 auto;
+            padding: 15px;
+        }
+        &-button {
+            font-weight: unset;
+            padding: 5px 40px;
+            margin-top: 10px;
+            &.disabled {
+                cursor: not-allowed;
+                opacity: .65;
+                &:hover, &:active, &:focus {
+                    background-color: #4E7FC1;
+                    border: 1px solid #4E7FC1;                }
+            }
+        }
+    }
+    &-button {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        padding: 5px 40px;
+    }
+    .school-info {
+        flex: 1 1 auto;
+        margin: unset;
+    }
+    .attention {
+        text-align: center;
+    }
+    .school-price {
+        text-align: center;
+    }
+    .btn-danger {
+        background-color: #D82A40;
+        border-color: #D82A40;
+    }
+}
+
+.school-info-with-calendar {
+    flex: 1 1 75%;
+    .attention {
+        color: #A72222;
+        font-weight: 600;
+        line-height: 20px;
+    }
+    .school-link {
+        color: inherit;
+    }
+}
+
+.nav-tabs + .card.card-block {
+    border-top-left-radius: 0;
+}
+
+.reviews-panel {
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: $gray-lightest;
+    height: 710px;
+    overflow-y: scroll;
+    @include media-breakpoint-down('lg') {
+        height: auto;
+        margin-top: 1rem;
+    }
+    &__reviews-count {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    &__mark {
+        font-size: 0.75rem;
+    }
+    &__stars {
+        margin-left: 0.5rem;
+        .stars-bar {
+            &__star {
+                height: 14px;
+                width: 14px;
+                background-size: 14px 14px;
+                &.half-star {
+                    width: 7px;
+                }
+            }
+        }
+    }
+    &__item {
+        margin-bottom: 3rem;
+        text-align: left;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &__rate {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+    }
+    &__date {
+        color: $gray-light;
+    }
+    &__author {
+        margin-bottom: 1rem;
+    }
+    &__name {
+        color: $gray-dark;
+    }
+    &__title {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    &__text {
+        color: $gray-light;
+        margin-bottom: 0.5rem;
+    }
+    &__readmore {
+        color: #4E7FC1;
+        cursor: pointer;
+    }
+    &__button {
+        margin-top: 2rem;
+    }
+    &::-webkit-scrollbar {
+        width: 5px;
+        margin-right: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #E1E1E1;
+        border-radius: 2px;
+    }
+}
+.gallery {
+    &__main-container {
+        position: relative;
+        overflow: hidden;
+    }
+    &__main {
+        height: auto;
+        width: 100%;
+        max-height: initial;
+    }
+    &__thumb-container {
+        position: relative;
+        overflow: hidden;
+        font-size: 0;
+        height: 74px;
+        width: 74px;
+        display: inline-block;
+        margin: 15px 10px 15px 0;
+        &.active {
+            border: 2px solid #4E7FC1;
+        }
+    }
+    &__thumb {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        max-width: initial;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.school-contacts {
+
+    @include media-breakpoint-up('md') {
+        padding: 2rem;
+        position: relative;
+
+    }
+    @include media-breakpoint-down('md') {
+        padding-left: 15px;
+        padding-top: 50px;
+    }
+
+    &__head {
+        color: $heading-dark;
+        font-family: Roboto, serif;
+        font-size: 16px;
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 19px;
+        margin-bottom: 15px;
+    }
+    &__mail-logo {
+        display: inline-block;
+        background: image-url('email_icon.svg');
+        background-size: auto 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        flex: 0 0 25px;
+    }
+    &__address-logo {
+        display: inline-block;
+        background: image-url('location_icon.svg');
+        background-size: auto 25px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        flex: 0 0 25px;
+    }
+    &__contacts {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    &__mail {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    &__address {
+        display: flex;
+    }
+    &__registration{
+        color: #2A2A2A;
+        font-family: "Open Sans", serif;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 19px;
+        margin-bottom: 15px;
+    }
+    .contact-card {
+        position: absolute;
+        z-index: 3;
+        left: 15px;
+        right: 15px;
+    }
+}
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+.ratings-card {
+    background: $color-main-active-element;
+    box-shadow: none;
+}
+
+.school-details {
+    width: 1140px;
+    padding: 0 15px;
+
+    .school-contacts {
+    }
+    @include media-breakpoint-up('md') {
+        margin: 4rem auto 0;
+    }
+
+    @include media-breakpoint-down('lg') {
+        width: 960px;
+    }
+
+    @include media-breakpoint-down('md') {
+        display: flex;
+        flex-direction: column-reverse;
+        width: auto;
+        padding: 0;
+        padding-bottom: 30px;
+
+
+    }
+}
+.row-padding {
+    @include media-breakpoint-only('lg') {
+        padding-left: 8.33333%;
+        padding-right: 8.33333%;
+    }
+}
+.feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-breakpoint-up("md") {
+        padding: 20px;
+        text-align: center;
+    }
+
+    @include media-breakpoint-down("md") {
+        text-align: left;
+    }
+
+    &__question {
+        color: $heading-dark;
+        font-family: Roboto, serif;
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 28px;
+        margin-bottom: 0;
+
+        @include media-breakpoint-down("md") {
+            align-self: flex-start;
+        }
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 24px;
+        width: 24px;
+        margin-bottom: 10px;
+        border: 1px solid #000;
+        border-radius: 50%;
+    }
+    &__text {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    &__button {
+        height: 48px;
+        width: 183px;
+        border-radius: 5px;
+        background-color: #0F0F0F;
+    }
+
+}
+.slider-image-container {
+    position: relative;
+    overflow: hidden;
+}
+.slider-image {
+    height: auto;
+    width: 100%;
+    max-height: initial;
+}
+.slider-thumb-container {
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+    height: 74px;
+    width: 74px;
+    display: inline-block;
+    margin: 15px 10px 15px 0;
+    &.active {
+        border: 2px solid #4E7FC1;
+    }
+}
+.slider-thumb {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    max-width: initial;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slider-nav {
+    .slick-current {
+        .slider-thumb-container {
+            border: 2px solid #4E7FC1;
+        }
+    }
+}
+@media screen and (max-width: 1410px) {
+    .base-line.icon {
+        display: inline-block;
+    }
+    .basic-info-title {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 1410px) {
+    .school-review-block {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    --fc-daygrid-event-dot-width: 8px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    margin-left: 10px;
+    cursor: pointer;
+    text-align: left;
+    display: inline-flex !important;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    .average-rating-score {
+        align-items: center;
+        background: rgb(0, 53, 128);
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        border-radius: 5.81818px 5.81818px 5.81818px 0px;
+        height: 32px;
+        width: 32px;
+        min-width: 32px;
+        font-size: 1rem;
+    }
+
+    .review-text-block {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        --fc-daygrid-event-dot-width: 8px;
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: inherit;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 12px;
+        font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        margin-left: 0px;
+        margin-right: 8px;
+        text-align: right;
+
+        .reviews-count {
+            cursor: pointer;
+            text-align: right;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        }
+    }
+}
+}
+
+.card-footer {
+    padding: 0.2rem 0.25rem !important;
+}
+
+@include media-breakpoint-only('xs') {
+    .card-text {
+        min-height: 38px;
+    }
+}
+
+@include media-breakpoint-up('md') {
+    .card-text {
+        font-size: 0.75rem;
+    }
+    .card-link {
+        font-size: 14px;
+    }
+}
+
+.v-toast .v-toast__item {
+    margin: 0.5rem;
+    background: $brand-success;
+
+    .v-toast__text {
+        padding: 0.5rem 1rem;
+    }
+
+    .v-toast__icon {
+        background: url(/build/img/cart.png) no-repeat;
+        background-size: contain;
+    }
+}
+
+.price-with-old {
+    text-decoration: line-through;
+    color: rgb(200, 200, 200);
+}
+
+.price-with-new {
+    color: #ff0000;
+}
+
+@include media-breakpoint-down('md') {
+    .no-padding-on-mobile {
+        padding: 0;
+    }
+}

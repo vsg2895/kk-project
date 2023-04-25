@@ -1,0 +1,132 @@
+// ====================================
+// External Fonts
+// ====================================
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900);
+// ====================================
+// Setup
+// ====================================
+@import "settings/colors";
+@import "settings/variables";
+@import "~bootstrap/scss/mixins";
+// ====================================
+// Vendors
+// ====================================
+// TODO: Handle CSS import separately, importing CSS via @import will be deprecated in future libsass versions
+@import "~bourbon/app/assets/stylesheets/bourbon";
+@import "~semantic-ui-dropdown/dropdown";
+@import "~semantic-ui-transition/transition";
+@import "~semantic-ui-loader/loader";
+@import "~semantic-ui-search/search";
+@import "~element-ui/lib/theme-chalk/date-picker";
+@import "~slick-carousel/slick/slick.css";
+// ====================================
+// Dependencies
+// ====================================
+@import "dependencies/mixins";
+@import "dependencies/helpers";
+@import "dependencies/icons";
+@import "dependencies/vue";
+@import "dependencies/animate";
+@import "dependencies/sui-dropdown";
+@import "dependencies/sui-search";
+@import "dependencies/outdated-browser";
+// ====================================
+// WYSIWYG HTML editor
+// ====================================
+@import "~vue-wysiwyg/dist/vueWysiwyg.css";
+// ====================================
+// Settings
+// ====================================
+@import "settings/type";
+@import "settings/main";
+// ====================================
+// Foundation
+// ====================================
+@import "foundation/base";
+@import "foundation/header";
+@import "foundation/footer";
+// ====================================
+// Components
+// ====================================
+@import "components/alert";
+@import "components/animation";
+@import "components/buttons";
+@import "components/card";
+@import "components/cookies";
+@import "components/forms";
+@import "components/lists";
+@import "components/map";
+@import "components/nav";
+@import "components/pagination";
+@import "components/popover";
+@import "components/progress";
+@import "components/calendar/vuelendar";
+@import "components/tables";
+@import "components/tags";
+@import "components/datepicker";
+@import "components/jumbotron";
+@import "components/cart";
+// ====================================
+// Modules
+// ====================================
+@import "modules/compare";
+@import "modules/rating";
+@import "modules/comments";
+// ====================================
+// Pages
+// ====================================
+@import "pages/auth";
+@import "pages/landing";
+@import "pages/search";
+@import "pages/school";
+@import "pages/course";
+@import "pages/dashboard";
+@import "pages/page";
+@import "pages/order";
+@import "pages/error";
+@import "pages/gift-card";
+@import "pages/intensivcourse";
+@import "pages/admin";
+@import "pages/posts";
+@import "pages/register";
+@import "pages/post-card";
+@import "pages/partners";
+
+// ====================================
+// Custom Styles
+// ====================================
+
+.logo-size {
+  width: 10em !important;
+  margin: 0 auto;
+  color: black;
+}
+
+.logo-size-png {
+    height: 80px;
+}
+
+#google_translate_element {
+    text-align: end !important;
+    padding: 5px !important;
+    padding-right: 2rem !important;
+}
+.goog-te-gadget-simple{
+    background-color: #FFD4CD!important;
+    border: none!important;
+    box-shadow: 0px 3px 10px #e1a197!important;
+}
+#google_translate_element .goog-te-gadget-icon {
+    display: none !important;
+}
+@media only screen and (min-width: 578px) {
+    .temp-div {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@import "icons";
+@import '~sweetalert2/dist/sweetalert2.min.css';

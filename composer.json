@@ -1,0 +1,89 @@
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.0.0",
+        "barryvdh/laravel-dompdf": "^0.9.0",
+        "doctrine/dbal": "^2.6",
+        "egulias/email-validator": "^2.1",
+        "giggsey/libphonenumber-for-php": "^8.2",
+        "guzzlehttp/guzzle": "^6.2",
+        "intervention/image": "^2.3",
+        "irazasyed/telegram-bot-sdk": "^2.0",
+        "klarna/checkout": "4.0",
+        "klarna/kco_rest": "4.2.3",
+        "klarna/php-xmlrpc": "4.0",
+        "kyslik/column-sortable": "^5.7",
+        "laravel/framework": "5.5.*",
+        "laravel/tinker": "^1.0",
+        "laravelcollective/html": "~5.0",
+        "lord/laroute": "^2.4",
+        "maatwebsite/excel": "^3.0",
+        "nutsweb/laravel-prerender": "^2.0",
+        "predis/predis": "^1.1",
+        "rap2hpoutre/laravel-log-viewer": "^0.12",
+        "rollbar/rollbar-laravel": "2.*",
+        "roumen/sitemap": "^2.6",
+        "skagarwal/google-places-api": "^1.2",
+        "torann/json-ld": "^0.0.11"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.1",
+        "barryvdh/laravel-ide-helper": "^2.4",
+        "filp/whoops": "~2.0",
+        "fzaninotto/faker": "~1.7",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~6.0",
+        "symfony/css-selector": "3.1.*",
+        "symfony/dom-crawler": "3.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-4": {
+            "Jakten\\": "app/",
+            "Admin\\": "app/Modules/Admin",
+            "Organization\\": "app/Modules/Organization",
+            "Shared\\": "app/Modules/Shared",
+            "Student\\": "app/Modules/Student",
+            "Api\\": "app/Modules/Api",
+            "PublicApi\\": "app/Modules/PublicApi",
+            "Email\\": "app/Modules/Email",
+            "Blog\\": "app/Modules/Blog",
+            "TelegramBot\\": "app/Modules/TelegramBot"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+            ]
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}

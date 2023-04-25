@@ -1,0 +1,11 @@
+.slick-slide {
+  margin: 0 8px !important;
+}
+
+a {
+  &.icon--link {
+    svg {
+      width: 1rem;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+
+// ====================================
+// Navigation
+// ====================================
+
+.nav {
+}
+
+.nav-link {
+    font-family: $font-family-heading;
+    font-weight: 500;
+    position: relative;
+
+    &.active {
+        color: $brand-primary;
+    }
+
+    @include hover-focus {
+        color: $brand-primary;
+    }
+}
+
+
+.nav-tabs {
+    position: relative;
+    z-index: 2;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 0;
+    border-bottom: 0;
+
+    @include media-breakpoint-down('sm') {
+        overflow-x: scroll;
+    }
+
+    .nav-item {
+        float: none;
+        display: inline-block;
+        font-size: $font-size-base;
+    }
+
+    .nav-link {
+        height: auto;
+        margin: 0.5rem 15px 0;
+        border: 0;
+        cursor: pointer;
+
+        &.active,
+        &.active:focus,
+        &.active:hover {
+            color: $gray-dark;
+        }
+
+        .tag {
+            padding-top: 0.325rem;
+            padding-bottom: 0.325rem;
+        }
+    }
+    .ico {
+        margin-right: 0.25rem;
+    }
+}
+
+
+.nav-tabs-lined {
+    background-color: transparent !important;
+    box-shadow: inset 0 (-$nav-tabs-border-width*2) 0 0 $nav-tabs-border-color;
+
+    .nav-item + .nav-item {
+        margin-left: 0;
+    }
+
+    .nav-link {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        color: $gray-light;
+        border-radius: 0;
+        border: 0;
+        border-bottom: $border-width*2 solid transparent;
+        color: $gray;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:hover {
+            border-bottom-color: $gray-light;
+        }
+        &.inactive {
+            color: $gray-lighter;
+        }
+    }
+    .nav-link.active,
+    .nav-link.active:focus,
+    .nav-link.active:hover,
+    .nav-item.open .nav-link,
+    .nav-item.open .nav-link:focus,
+    .nav-item.open .nav-link:hover {
+        color: $brand-primary;
+        border-bottom-color: $brand-primary;
+    }
+
+    &-sm {
+        box-shadow: inset 0 (-$nav-tabs-border-width) 0 0 $nav-tabs-border-color;
+
+        .nav-item {
+            margin-bottom: -$border-width;
+        }
+        .nav-link {
+            border-bottom-width: $border-width;
+            font-size: $font-size-sm;
+        }
+    }
+}
+
+
+
+
+.collapsed {
+    .ico-angle-up {
+        transform: rotateX(180deg);
+    }
+}
+
+.search-links-block {
+    padding: 5px 0;
+    text-align: left;
+    font-size: 14px;
+}
+.search-links {
+    font-size: $font-size-sm;
+    text-decoration: underline;
+    &:hover {
+        color: black;
+    }
+}

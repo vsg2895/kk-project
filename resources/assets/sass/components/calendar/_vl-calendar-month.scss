@@ -1,0 +1,137 @@
+@import 'variables';
+
+.vl-calendar-month {
+  //padding: $vl-calendar-month-padding;
+
+    @include media-breakpoint-down('sm') {
+        font-family: Roboto, sans-serif;
+    }
+
+  &__title {
+    color: #fff;
+    font-size: 16px;
+    height: 22px;
+    letter-spacing: 0;
+    line-height: 19px;
+    text-align: center;
+    font-weight: 600;
+
+    @include media-breakpoint-up('sm') {
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 600;
+        font-size: large;
+    }
+  }
+
+  &__week-numbers-column {
+    padding-top: 24px;
+  }
+
+  &__week-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-up('md') {
+      margin: 5px 0;
+    }
+
+    width: 100%;
+    height: 24px;
+    color: $vl-gray-0;
+    font-size: 10px;
+  }
+
+  &__week-day {
+    width: 14%;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+  }
+
+  &__day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 14%;
+    height: 32px;
+    overflow: hidden;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 19px;
+
+    @include media-breakpoint-down('sm') {
+
+    }
+
+    &__price {
+      font-family: Raleway, sans-serif;
+      font-style: normal;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 10px;
+      color: #00AF97;
+    }
+
+    @for $i from 1 through 6 {
+      &--offset-#{$i} {
+        margin-left: calc(#{$i} * 14%);
+      }
+    }
+
+    &.disabled {
+      color: $vl-gray-1;
+      pointer-events: none;
+      text-decoration-line: line-through;
+
+      &--first {
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+      }
+
+      &--last {
+        border-top-right-radius: 14px;
+        border-bottom-right-radius: 14px;
+      }
+    }
+
+    &.selected {
+      background: $vl-selected-day-bg-color;
+      color: $vl-selected-day-text-color;
+      font-weight: 800;
+
+      &.disabled {
+        border: $vl-selected-disabled-border;
+        background: $vl-selected-disabled-day-bg-color;
+        color: $vl-selected-disabled-day-text-color;
+      }
+
+      //&--first {
+      //  border-top-left-radius: 14px;
+      //  border-bottom-left-radius: 14px;
+      //}
+      //
+      //&--last {
+      //  border-top-right-radius: 14px;
+      //  border-bottom-right-radius: 14px;
+      //}
+    }
+
+    &:hover {
+      &:not(.selected) {
+          //border-radius: 14px;
+          background: $vl-selected-day-bg-color;
+          color: $vl-selected-day-text-color !important;
+          //font-weight: 800;
+      }
+    }
+  }
+}

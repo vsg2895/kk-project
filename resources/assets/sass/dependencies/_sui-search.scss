@@ -1,0 +1,105 @@
+
+// ====================================
+// Semantic Search
+// ====================================
+
+.ui.search {
+    &.focus .form-group input {
+        border: 2px solid $color-dropdown-hover;
+    }
+
+    .ui.input {
+        .prompt {
+            line-height: $input-line-height;
+            border-radius: $input-border-radius;
+            width: 100%;
+            font-weight: 500;
+            color: #2A2A2A;
+            transition: $transition;
+            -webkit-appearance: none;
+            background-color: $color-main-active-element;
+
+            @include media-breakpoint-down('md') {
+                font-family: "Open Sans", serif;
+                font-size: 12px;
+                letter-spacing: 0;
+                line-height: 17px;
+            }
+
+            &[disabled="disabled"] {
+                color: initial;
+                font-weight: initial;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        .ui.inline.loader {
+            margin-left: -31px;
+            margin-top: -3px;
+        }
+    }
+    .results {
+        top: 48px;
+        width: 100%;
+        min-width: 310px;
+        border: none;
+        border-radius: $input-border-radius;
+        margin: 0;
+        background: $color-main-active-element;
+        box-shadow: none;
+
+        .icon-defs {
+            display: none;
+        }
+        .result {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            border-bottom: 0;
+            padding: 0.5rem 1rem 0.5rem 0.75rem;
+
+            .item-icon,
+            .item-title,
+            .item-description {
+                white-space: nowrap;
+                font-size: 12px;
+            }
+            .item-icon {
+                margin-right: 1.5rem;
+                width: 16px;
+            }
+            .item-icon,
+            .item-title {
+                float: left;
+            }
+            .item-description {
+                padding-left: .5rem;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                min-width: 0;
+                text-align: right;
+                color: $brand-success;
+                font-size: $font-size-sm;
+                font-weight: 500;
+
+                @include media-breakpoint-down('sm') {
+                    display: none;
+                }
+            }
+        }
+        > p { // No results
+            padding: 0.5rem 1rem;
+            text-align: left;
+        }
+        .message {
+            .header {
+                display: none;
+            }
+            .description {
+                line-height: initial;
+                margin-top: 0;
+            }
+        }
+    }
+}

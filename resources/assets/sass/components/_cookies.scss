@@ -1,0 +1,60 @@
+
+// ====================================
+// Cookies
+// ====================================
+
+.cookies {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 20px;
+    transition: right .35s ease-out;
+
+    .cookies-body {
+        padding: 18px 30px;
+        background-color: rgba(255,255,255,0.9);
+        border: 1px solid #e2e7e8;
+        border-radius: 3px;
+        box-shadow: 0 1px 0 0 rgba(0,0,0,0.11), 0 1px 6px 0 rgba(0,0,0,0.1);
+        text-align: center;
+
+        @include media-breakpoint-up('md') {
+            text-align: center;
+            background-repeat: no-repeat;
+            background-position: 30px 50%;
+            background-size: 28px 28px;
+            border-radius: 32px;
+            position: relative;
+        }
+        .cookies-copy {
+            margin-bottom: 0;
+        }
+        .cookies-ok {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            margin: 0;
+            padding: 4px;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            background-color: transparent;
+            border: 0;
+            outline: none !important;
+            text-shadow: none;
+            box-shadow: none;
+            text-decoration: none;
+            touch-action: manipulation;
+            user-select: none;
+
+            @include media-breakpoint-up('md') {
+                right: 30px;
+                bottom: auto;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

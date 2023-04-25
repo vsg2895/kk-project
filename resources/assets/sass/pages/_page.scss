@@ -1,0 +1,247 @@
+
+// ====================================
+// Pages
+// ====================================
+/*-------------------------------------*/
+
+.accordion__item {
+    margin: 5px auto 5px -25px;
+}
+.accordion__item .accordion__title {
+    font-family: "Roboto";
+    position: relative;
+    display: block;
+    padding: 13px 60px 15px 13px;
+    margin-bottom: 2px;
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 5px;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+.accordion__item .accordion__title:hover {
+    background-color: black;
+    transition: all 0.5s ease-out;
+}
+.accordion__item .accordion-active {
+    background-color: black;
+}
+.accordion__item .accordion__title .accordion__arrow {
+    font-family: "Roboto";
+    position: absolute;
+    top: 13px; right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 5px;
+    background-color: black;
+    border-radius: 50%;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.accordion__item .accordion__rotate {
+    transform: rotate(225deg);
+}
+.accordion__item .accordion__content {
+    padding: 30px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    display: none;
+    background-color: black;
+}
+.accordion__content {
+    word-wrap: break-word;
+    color: white;
+    border-radius: 5px;
+    margin-top: -15px;
+}
+.accordion__item .accordion__arrow-item {
+    font-weight: 700;
+}
+
+.page-pages {
+    padding-top: 60px;
+
+    .page-title {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        + .lead {
+            margin-top: -1rem;
+            text-align: center;
+        }
+    }
+    .sidebar {
+        position: relative;
+
+        aside {
+            &:before {
+                position: absolute;
+                content: "";
+                top: -60px;
+                left: -40px;
+                width: 24px;
+                height: 100vh;
+                @include media-breakpoint-up('sm') {
+                    background-image: url(/build/img/road-part@2x.png);
+                    background-size: 24px;
+                    background-repeat: repeat-y;
+                    background-position: 0;
+                }
+            }
+            @include media-breakpoint-down('sm') {
+                border-bottom: 1px solid $gray-lighter;
+            }
+
+            h2 a {
+                color: black;
+            }
+
+            .nav-link {
+                font-weight: 600;
+                padding: 5px 10px;
+                color: black;
+                @include media-breakpoint-down('sm') {
+                    width: 100%;
+                }
+                &.active {
+                    background-color: $gray-lighter;
+                    color: black;
+                }
+            }
+        }
+        .page-title {
+            margin-top: 50px;
+            text-align: left;
+        }
+        .page-icon {
+            position: absolute;
+            top: 20px;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            @include media-breakpoint-down('sm') {
+                position: relative;
+                height: 60px;
+                width: 60px;
+                display: flex;
+                padding: 10px;
+            }
+            text-align: center;
+            line-height: 50px;
+            .ico {
+                stroke-width: 2px;
+                margin: 0 auto;
+                width: 50px;
+                height: 100%;
+                opacity: 0.7;
+            }
+
+            &.blue {
+                background-color: $brand-primary;
+                box-shadow: 0 0 12px rgba($brand-primary, 0.6);
+                &:before,
+                &:after {
+                    border-color: $brand-primary;
+
+                }
+            }
+
+            &.green {
+                background-color: $brand-success;
+                box-shadow: 0 0 12px rgba($brand-success, 0.6);
+                &:before,
+                &:after {
+                    border-color: $brand-success;
+                    filter: drop-shadow(0 0 6px rgba($brand-success, 0.6));
+                }
+            }
+
+            &.yellow {
+                background-color: $brand-warning;
+                box-shadow: 0 0 12px rgba($brand-warning, 0.6);
+                &:before,
+                &:after {
+                    border-color: $brand-warning;
+                }
+            }
+
+            &.square {
+                border-radius: 4px;
+                line-height: 100px;
+            }
+
+            &.hexagon {
+                width: 100px;
+                height: 57.74px;
+                margin: 28.87px 0;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    width: 0;
+                    border-left: 50px solid transparent;
+                    border-right: 50px solid transparent;
+                }
+                &:before {
+                    left: 0;
+                    bottom: 100%;
+                    border-bottom-style: solid;
+                    border-bottom-width: 28.87px;
+                }
+
+                &:after {
+                    top: 100%;
+                    left: 0;
+                    width: 0;
+                    border-top-style: solid;
+                    border-top-width: 28.87px;
+                }
+                @include media-breakpoint-down('sm') {
+                    padding: 0;
+                    width: 60px;
+                    height: 34.64px;
+                    margin: 17.32px 0;
+                    &:before,
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        width: 0;
+                        border-left: 30px solid transparent;
+                        border-right: 30px solid transparent;
+                    }
+                    &:before {
+                        left: 0;
+                        bottom: 100%;
+                        border-bottom-style: solid;
+                        border-bottom-width: 17.32px;
+                    }
+
+                    &:after {
+                        top: 100%;
+                        left: 0;
+                        width: 0;
+                        border-top-style: solid;
+                        border-top-width: 17.32px;
+                    }
+
+                }
+            }
+
+            &.round {
+                border-radius: 50px;
+            }
+        }
+    }
+}

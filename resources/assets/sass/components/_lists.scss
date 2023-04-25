@@ -1,0 +1,44 @@
+
+// ====================================
+// Lists
+// ====================================
+
+.list {
+    margin-bottom: 1rem;
+
+    &.faded {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 60px;
+            background-image: linear-gradient(to top, rgba(#fff, 1), rgba(#fff, 0));
+        }
+    }
+
+    &-striped {
+        .list-item {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            &, &:first-child {
+                border: none;
+            }
+            &:nth-child(even) {
+                background-color: $gray-lightest;
+            }
+        }
+    }
+}
+.list-item {
+    padding: 0.75rem 0;
+    border-bottom: $border-width solid $gray-lighter;
+
+    &:first-child {
+        //border-top: $border-width solid $gray-lighter;
+    }
+}

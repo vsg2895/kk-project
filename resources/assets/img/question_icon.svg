@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>6DF3A6B6-DBEC-4310-98F2-41A84E713201</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="750" height="235" rx="2"></rect>
+        <filter x="-1.7%" y="-4.7%" width="103.5%" height="111.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="School-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-708.000000, -2523.000000)">
+        <g id="Have-any-questions?" transform="translate(345.000000, 2495.000000)">
+            <g id="bg">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="UI/Icons/Question" transform="translate(363.000000, 28.000000)">
+                <rect id="Background" x="0" y="0" width="24" height="24"></rect>
+                <g id="question-icon" transform="translate(1.000000, 1.000000)" stroke="#4E7FC1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11,0 C17.075,0 22,4.925 22,11 C22,17.075 17.075,22 11,22 C4.925,22 0,17.075 0,11 C0,4.925 4.925,0 11,0 L11,0 Z" id="Stroke-490"></path>
+                    <path d="M11,13 L11,12 C12.6,12 14,10.6 14,9 C14,7.4 12.6,6 11,6 C9.8,6 8.7,6.9 8.2,7.9" id="Stroke-491"></path>
+                    <path d="M11,16 L11,17" id="Stroke-492"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

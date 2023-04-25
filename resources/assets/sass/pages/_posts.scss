@@ -1,0 +1,78 @@
+.posts-page {
+    padding: 15px 0;
+}
+.posts-title {
+    padding-top: 55px;
+}
+.post-item {
+    background: #fff;
+    margin: 20px auto;
+    max-width: 350px;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    transition: .3s;
+    &:hover, &:active {
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    }
+    &__img {
+        height: 190px;
+        overflow: hidden;
+        text-align: center;
+        img {
+            object-fit: cover;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        color: #111111;
+        font-weight: bold;
+        line-height: 1.2em;
+        word-spacing: 1px;
+        font-size: 18px;
+        text-decoration: none;
+        transition: .3s;
+        margin-bottom: 15px;
+        width: 100%;
+        &:hover, &:active {
+            text-decoration: none;
+            color: #888888;
+        }
+    }
+    &__title {
+        font-size: inherit;
+        margin: 0;
+    }
+    &__content {
+        padding: 15px 20px;
+        height: calc(100% - 190px);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__meta {
+        color: #ccc;
+        font-size: 14px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+.post-actions {
+    display: flex;
+    align-self: flex-end;
+    width: 100%;
+    .btn {
+        &:first-child {
+            margin-right: 15px;
+        }
+    }
+}
+.equal-height {
+    display: flex;
+    flex-wrap: wrap;
+    [class*="col-"]{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,116 @@
+
+// ====================================
+// Footer
+// ====================================
+
+.korkortsjakten-ab-c {
+    color: #0F0F0F !important;
+    font-family: "Open Sans", serif;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 17px;
+    text-align: center;
+
+    @include media-breakpoint-up("sm") {
+        font-size: 14px;
+    }
+}
+
+.kontakt-korkortsjakt {
+    margin-bottom: 20px;
+    font-family: "Open Sans";
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 0;
+    text-align: center;
+    color: #0F0F0F;
+}
+
+.additional-padding-footer {
+    padding-left: 13% !important;
+}
+
+.vagen-till-korkort-m {
+    color: #0F0F0F;
+    font-family: "Open Sans";
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+#page-footer {
+    position: relative;
+    margin-top: 6rem;
+
+    .road-right {
+        margin-top: 32px;
+        margin-bottom: 48px;
+
+        @include media-breakpoint-up("lg") {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .road-up {
+        position: absolute;
+        left: 0;
+        bottom: 60px;
+        transform: rotate(90deg);
+
+        @include media-breakpoint-down("md") {
+            bottom: 0;
+
+            img {
+                width: 87px;
+                height: 36px;
+            }
+        }
+
+        @include media-breakpoint-up("md") {
+            left: -40px;
+        }
+
+        @include media-breakpoint-up("xxl") {
+            left: 0;
+        }
+    }
+
+    .page-footer-inner {
+        background-color: $color-main-bg;
+        font-size: $font-size-sm;
+
+        @include media-breakpoint-up('md') {
+            padding-bottom: 50px;
+        }
+
+        .brand-logo {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            margin-left: 0px!important;
+        }
+        .contact-link {
+            color: black;
+        }
+
+        @include media-breakpoint-down('sm') {
+            .col-sm-4 + .col-sm-4 {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+    @include media-breakpoint-down('sm') {
+        .container {
+            width: auto;
+        }
+    }
+}
+
+.footer-badges {
+    margin: auto !important;
+}

@@ -1,0 +1,10 @@
+* text=auto
+*.css linguist-vendored
+*.scss linguist-vendored
+*.scss eol=lf
+*.php eol=lf
+*.js eol=lf
+*.json eol=lf
+*.png binary
+*.jpg binary
+

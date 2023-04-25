@@ -1,0 +1,21 @@
+
+// ====================================
+// Progress
+// ====================================
+
+.progress {
+    height: auto;
+    background-color: #fff !important;
+    border-radius: 9999px;
+    box-shadow: 0 1px 4px 0 rgba(#000, 0.15);
+}
+.progress-bar {
+    display: block !important;
+    min-width: 0.75rem;
+    max-width: 100%;
+    height: 0.75rem !important;
+    color: #fff;
+    border-radius: 9999px;
+    background-color: $brand-primary;
+    transition: width 0.25s #{$transition-ease};
+}

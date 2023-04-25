@@ -1,0 +1,276 @@
+.hide-for-small {
+    @include media-breakpoint-down('sm') {
+        display: none;
+    }
+}
+// #page-header > div > div.header-item.header-item-adjust.road-menu > div:nth-child(1) > ul > li:nth-child(2) {
+//     margin-top: 60px!important;
+// }
+.ico-menu-circle {
+    font-size: 20px!important;
+    // margin-top: 11px;
+    color: black;
+}
+.ico-menu-basket {
+    font-size: 35px!important;
+    letter-spacing: 0;
+    line-height: 35px;
+    text-align: center;
+    height: 37px;
+    width: 28px;
+    color: #FFFFFF;
+    margin-right: 45px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.ico-hamburger-menu {
+    height: 12px!important;
+    margin-left: -4px!important;
+    display: block!important;
+}
+
+.hide-for-small-up {
+    @include media-breakpoint-up('sm') {
+        display: none!important;
+    }
+}
+
+.decrease-font {
+    @include media-breakpoint-down('sm') {
+        color: #0F0F0F;
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 28px;
+    }
+}
+
+.hide-for-medium-up {
+    @include media-breakpoint-up('md') {
+        display: none!important;
+    }
+}
+
+a.btn__width-auto {
+    @include media-breakpoint-down('sm') {
+        display: block;
+        width: auto;
+        float: right;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.kkj-font-weight-light {
+    font-weight: lighter;
+}
+
+/*** Equal height***/
+@include media-breakpoint-down('sm') {
+    .row.is-flex-small-down {
+        display: flex;
+        flex-wrap: wrap;
+
+        & > [class*='col-'] {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            background: none;
+            position: static;
+        }
+
+        &[class*="col-"] {
+            background: #fff;
+        }
+    }
+}
+/*** End equal height***/
+
+/*** Flex ***/
+.flex-jc-sb-medium-up{
+    @include media-breakpoint-up('md') {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+}
+
+/*** Iframe Pages Styles ***/
+.white-background {
+    background-color: white !important;
+}
+
+.iframe-menu-gap {
+    gap: 0.5rem;
+}
+
+.iframe-menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 2560px) {
+    .klarna-logo-container {
+        width: 3%;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .klarna-logo-container {
+        width: 4%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .klarna-logo-container {
+        width: 6%;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .iframe-page-addon {
+        flex-flow: column nowrap!important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .klarna-logo-container {
+        width: 8%;
+    }
+
+    .iframe-page-addon .addon__delete {
+        align-items: center!important;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .iframe-segment-result-object{
+        height: fit-content !important;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .klarna-logo-container {
+        width: 10%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .klarna-logo-container {
+        width: 13%;
+    }
+    .iframe-menu-button {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .klarna-logo-container {
+        width: 15%;
+    }
+    .iframe-menu-button {
+        font-size: 0.7rem;
+    }
+}
+
+.iframe-payment-page-block{
+    background-color:black;
+    color:white;
+}
+
+.iframe-payment-page-block .course-participants .course-participant .row,
+.iframe-payment-page-block .iframe-cart-addon-participant-block .row
+{
+    background-color: black!important;
+    color: white;
+}
+
+.iframe-payment-page-block .course-participants .btn-outline-primary, {
+   background-color: green;
+   color: white;
+}
+
+.iframe-payment-page-checkout-card {
+    background-color: black !important;
+}
+
+.iframe-payment-page-checkout-card .addon__controls {
+    color: white !important
+}
+
+.iframe-payment-page-checkout-card .school-price {
+    color: white !important
+}
+
+.iframe-payment-background {
+    background-color: white;
+}
+
+.iframe-payment-page-checkout-card .course-item-background {
+    color: white !important
+}
+
+.iframe-payment-page-block .course-participants .course-participant .row input[type=text],
+.iframe-payment-page-block .course-participants .course-participant .row input[type=tel],
+.iframe-payment-page-block .course-participants .course-participant .row input[type=email],
+.iframe-payment-page-block .iframe-cart-addon-participant-block .row input[type=text],
+.iframe-payment-page-block .iframe-cart-addon-participant-block .row input[type=tel],
+.iframe-payment-page-block .iframe-cart-addon-participant-block .row input[type=email]
+{
+    background-color: white !important;
+    border-color: white !important
+}
+
+.iframe-checkout-container{
+    border: 0.15rem solid black;
+    border-radius: 10px;
+}
+
+.iframe-payment-page-block .iframe-payment-page-block-del-button, .iframe-payment-page-block .tag-pill{
+   margin-bottom: 0.3rem;
+}
+
+.bg-white-custom {
+    background-color: white !important;
+}
+
+.iframe-page-addon{
+    background-color: #F7F7F8;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+}
+
+.iframe-page-addon .addon .addon__controls {
+    justify-content: space-around !important;
+    gap: 0.3rem
+}
+
+.iframe-page-addon .addon__minus, .iframe-page-addon .addon__plus {
+    color: black
+}
+
+.iframe-page-addon .addon__title{
+    word-wrap: break-word;
+}
+
+@media only screen and (max-width: 1199px) {
+    .addon-container .flex-0-0-75 {
+        flex: 0 0 75% !important;
+    }
+}
+/* End Iframe styles*/
+
+/*** End flex ***/

@@ -1,0 +1,27 @@
+<?php
+$finder = PhpCsFixer\Finder::create()
+    ->in(__DIR__ . '/config')
+    ->in(__DIR__ . '/database')
+    ->in(__DIR__ . '/app')
+;
+return PhpCsFixer\Config::create()
+    ->setRules(array(
+        '@Symfony' => true,
+        'array_syntax' => array('syntax' => 'short'),
+        'concat_space' => array('spacing' => 'one'),
+        'no_blank_lines_before_namespace' => true,
+        'single_blank_line_before_namespace' => false,
+        'no_extra_consecutive_blank_lines' => true,
+        'ordered_imports' => true,
+        'phpdoc_summary' => false,
+        'phpdoc_no_empty_return' => false,
+        'no_unreachable_default_argument_value' => false,
+        'pre_increment' => false,
+        'short_scalar_cast' => false,
+        'phpdoc_indent' => false,
+        'phpdoc_align' => false,
+        'phpdoc_annotation_without_dot' => false,
+    ))
+    ->setFinder($finder)
+    ->setUsingCache(true)
+;

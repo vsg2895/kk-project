@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="2px" viewBox="0 0 10 2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>2C67C3EF-19FF-46A1-AAA3-0AF488D853A6</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="360" height="520" rx="10"></rect>
+        <filter x="-3.6%" y="-2.1%" width="107.2%" height="105.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Checkout-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-969.000000, -374.000000)">
+        <g id="Checkout" transform="translate(930.000000, 160.000000)">
+            <g id="Group-16">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Rectangle-6">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+            <g id="Item" transform="translate(20.000000, 95.000000)">
+                <rect id="grey-bg" fill="#F7F7F8" x="0" y="0" width="320" height="155"></rect>
+                <g id="Quantity" transform="translate(19.000000, 105.000000)">
+                    <g id="UI/Icons/Minus" transform="translate(0.000000, 14.000000)">
+                        <rect id="Background" x="0" y="0" width="10" height="2"></rect>
+                        <path d="M9,1 L1,1" id="minus-icon" stroke="#282828" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

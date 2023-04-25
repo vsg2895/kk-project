@@ -1,0 +1,201 @@
+
+// ====================================
+// Typography
+// ====================================
+
+body {
+    font-weight: 400;
+    color: $gray-dark;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background-color: $color-main-bg !important
+;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    + hr {
+        margin-top: -10px;
+    }
+}
+h1, .h1 {
+    font-family: $font-family-heading;
+    font-size: 1.75rem;
+    font-weight: 600;
+    //line-height: 1.125;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up('sm') {
+        font-size: $font-size-h1;
+        //line-height: 1.25;
+        margin-bottom: 1.25rem;
+    }
+}
+h2, .h2 {
+    font-family: $font-family-heading;
+    font-size: 1.375rem;
+    font-weight: 600;
+    //line-height: 1.125;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up('sm') {
+        font-size: $font-size-h2;
+        //line-height: 1.25;
+        margin-bottom: 1.25rem;
+    }
+}
+h3, .h3 {
+    font-family: $font-family-heading;
+    font-size: 1rem;
+    font-weight: 600;
+    //line-height: 1.125;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up('sm') {
+        font-size: $font-size-h3;
+        //line-height: 1.25;
+        margin-bottom: 1rem;
+    }
+}
+h4, .h4 {
+    font-family: $font-family-heading;
+    font-weight: 600;
+    //line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+h5, .h5 {
+    font-family: $font-family-heading;
+    font-weight: 500;
+    //line-height: 1.375;
+    margin-bottom: 0.5rem;
+}
+h6, .h6 {
+    font-family: $font-family-heading;
+    font-weight: 400;
+    //line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.display-1 {
+  font-size: $display1-size;
+  font-weight: $display1-weight;
+}
+.display-2 {
+  font-size: $display2-size;
+  font-weight: $display2-weight;
+}
+.display-3 {
+  font-size: $display3-size;
+  font-weight: $display3-weight;
+}
+.display-4 {
+  font-size: $display4-size;
+  font-weight: $display4-weight;
+}
+.display-5 {
+  font-size: 1.75rem;
+  font-weight: $display4-weight;
+}
+.display-6 {
+  font-size: 1.25rem;
+  font-weight: $display4-weight;
+}
+
+p {
+    font-size: 1rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+    &.lead {
+        //font-family: $font-family-heading;
+    }
+}
+
+.sub {
+    font-size: $font-size-sm;
+    color: $gray-lighter;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    + .sub {
+        margin-top: -10px;
+    }
+}
+
+.color-inverse {
+    &, p,
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6,
+    a {
+        color: #fff;
+    }
+    a:hover {
+
+    }
+}
+
+
+.text-accent {
+    font-family: $font-family-base;
+    font-weight: bold;
+    text-transform: uppercase;
+    //line-height: 1;
+}
+.text-danger {
+    a {
+        color: shade($brand-danger, 20%);
+
+        &:hover {
+            color: shade($brand-danger, 40%);
+        }
+    }
+}
+.text-success{
+    color: $brand-success;
+}
+
+.text-numerical {
+    font-family: $font-family-numerical;
+    font-weight: 400;
+
+    &.h1, &.h2 {
+        text-transform: uppercase;
+    }
+}
+
+.text-ellipsis {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.link {
+    color: $brand-primary;
+}
+
+
+.text-xs {
+    font-size: $font-size-xs;
+}
+.text-sm {
+    font-size: $font-size-sm;
+}
+.text-md {
+    font-size: $font-size-base;
+}
+.text-lg {
+    font-size: $font-size-lg;
+}

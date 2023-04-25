@@ -1,0 +1,154 @@
+
+// ====================================
+// Tables
+// ====================================
+
+.table {
+    margin-bottom: 1rem;
+
+    th, td {
+        vertical-align: middle;
+        line-height: inherit;
+        padding: 1rem 0.5rem;
+        border-top: none;
+        border-bottom: $border-width solid $gray-light;
+        text-align: left;
+
+        &:first-child {
+            padding-left: 1rem;
+        }
+        &:last-child {
+            padding-right: 1rem;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include media-breakpoint-up('xl') {
+            padding: 1rem 0.625rem;
+
+            &:first-child {
+                padding-left: 1.25rem;
+            }
+            &:last-child {
+                padding-right: 1.25rem;
+            }
+        }
+    }
+    thead {
+        @extend .h4;
+        font-size: $font-size-h4;
+        margin-bottom: 0;
+
+        tr {
+            //background-color: $gray-light;
+        }
+        th {
+            vertical-align: middle;
+            border-width: 1px;
+            border-color: $gray-light;
+        }
+    }
+    tbody th {
+	    //font-weight: 400;
+	    //color: $gray;
+	    font-weight: 600;
+    }
+}
+
+.table-striped {
+    border-bottom: $border-width solid $gray-light;
+
+    thead {
+        tr {
+            background-color: $gray-light;
+        }
+        th, td {
+        }
+    }
+    tbody {
+        tr:nth-of-type(2n+1) {
+            background-color: $gray-lightest;
+        }
+        th {
+            color: $gray-dark;
+            //font-weight: 400;
+        }
+    }
+    th, td {
+        border: none;
+    }
+}
+
+.table-unstyled {
+	th, td {
+		border: none !important;
+		padding-top: 0px !important;
+		padding-bottom: 0.25rem !important;
+
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+	}
+}
+
+
+
+
+
+
+
+.table-row {
+    @include clearfix;
+    padding: 0.5rem 0;
+    border-bottom: $table-border-width solid $table-border-color;
+
+    @include media-breakpoint-up('md') {
+        padding: 0.25s 0.5rem;
+    }
+}
+.table-head {
+    .table-cell {
+        font-size: $font-size-sm;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+.table-cell {
+    padding: 0.25rem 0.5rem;
+    word-break: break-all;
+
+    hr {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    > hr:first-child {
+        margin-top: 0;
+    }
+    > hr:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.more-button {
+    float: right;
+    position: relative;
+    z-index: 1;
+}
+
+
+.no-results {
+    padding-top: 1.5rem;
+    // padding-bottom: 1.5rem;
+    text-align: center;
+    color: $gray;
+
+    .no-results-title {
+        margin-bottom: 1.25rem;
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "plugins": ["lodash"],
+  "presets": ["env", "stage-0"],
+  "env": {
+    "test": {
+      "plugins": ["istanbul"]
+    }
+  },
+  "comments": false
+}

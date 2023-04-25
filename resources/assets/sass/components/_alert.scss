@@ -1,0 +1,42 @@
+
+// ====================================
+// Alerts
+// ====================================
+
+.alert {
+    &-dismissible {
+        .close {
+            top: 0;
+            opacity: 0.4;
+
+            &:hover, &:focus {
+                opacity: 0.8;
+                color: inherit;
+            }
+        }
+    }
+    .fa:first-of-type {
+        margin-right: 0.5rem;
+    }
+
+    p:last-child,
+    ul:last-child {
+        margin-bottom: 0;
+    }
+    a {
+        font-weight: 700;
+        color: inherit;
+
+        @include hover {
+            text-decoration: underline;
+        }
+    }
+}
+.alert-sm {
+    padding: .75rem 1rem;
+
+    &, p {
+        font-size: $font-size-sm;
+        line-height: $line-height-sm;
+    }
+}

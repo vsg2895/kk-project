@@ -1,0 +1,36 @@
+
+// ====================================
+// Pagination
+// ====================================
+
+.pagination {
+    display: block;
+    width: 100%;
+}
+.page-item {
+    display: inline-block;
+}
+.page-link {
+    margin-left: 0.25rem;
+    font-family: $font-family-numerical;
+    transition: $transition;
+    &:hover {
+        box-shadow: 0 1px 4px 0 rgba(#000, .15);
+    }
+}
+
+.brand-success>.pagination {
+    .page-item.active .page-link {
+        background-color: $brand-success;
+        &:focus,
+        &:hover {
+            background-color: $brand-success;
+        }
+    }
+    .page-item:not(.active) .page-link{
+        &:focus,
+        &:hover {
+            color: $brand-success;
+        }
+    }
+}
